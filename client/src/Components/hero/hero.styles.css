@@ -1,0 +1,35 @@
+.blink::before {
+    content: "Inspire";
+    animation: animate infinite linear 8s;
+}
+
+@keyframes animate {
+
+    0% {
+        content: "Discover";
+    }
+
+    50% {
+        content: "Create";
+    }
+
+    100% {
+        content: "Inspire";
+    }
+}
+
+@keyframes cursor-blink {
+    0% {
+      opacity: 0;
+    }
+  }
+  
+.blink::after {
+    content: "";
+    width: 2px;
+    height: 45px;
+    margin-left: 2px;
+    background: #ff274c;
+    display: inline-block;
+    animation: cursor-blink 1.5s steps(2) infinite;
+  }
