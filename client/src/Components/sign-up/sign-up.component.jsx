@@ -32,13 +32,12 @@ const SignUp = () => {
 
     return (
         <>
-            <Navbar />
             <div className="mx-auto"  >
                 <div className="flex w-full bg-bg items-center justify-center">
-                    <div className="hidden sm:block" >
+                    <div className="hidden sm:block">
                         <img className="object-cover shadow-lg rounded mb-20" height={"500"} width="512" src={img} alt="" />
                     </div>
-                    <div className="flex flex-col justify-center ml-[-30px] mb-20" >
+                    <div className="flex flex-col justify-center ml-[-30px] mb-20"  data-aos="fade-left"  >
                         <form action="" className="bg-s max-w-[400px] w-full mx-auto p-8 px-8 rounded-lg" >
                             <h2 className="text-4xl dark:text-white font-bold text-center font-Raleway" >Sign Up</h2>
                             <div>
