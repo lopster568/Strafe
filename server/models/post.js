@@ -2,16 +2,13 @@ import mongoose from 'mongoose'
 const { Schema } = mongoose
 
 const PostSchema = new mongoose.Schema({
-    caption: { type: String, required: true },
+    caption: { type: String },
     img: { type: String, required: true },
     author: { type: Schema.Types.ObjectId, ref: 'User', required: true },
     likes: [{
         type: Schema.Types.ObjectId, ref: 'User'
     }],
-    preferred_tags: [{
-        type: Schema.Types.ObjectId, ref: 'User'
-    }],
-    tags: { type: Array, default: []},
+    prompt: String,
     comments: [{
         user: { type: Schema.Types.ObjectId, ref: 'User' },
         comment: String,

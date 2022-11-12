@@ -1,6 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import userRoutes from './routes/user.js'
+import postRoutes from './routes/post.js'
 import cors from 'cors'
 const app = express()
 
@@ -17,3 +18,4 @@ mongoose.connect(URL, { useNewUrlParser: true, useUnifiedTopology: true }, (err)
     })
 })
 app.use("/api/user", userRoutes)
+app.use("/api/posts", postRoutes)
