@@ -9,11 +9,7 @@ const PostSchema = new mongoose.Schema({
         type: Schema.Types.ObjectId, ref: 'User'
     }],
     prompt: String,
-    comments: [{
-        user: { type: Schema.Types.ObjectId, ref: 'User' },
-        comment: String,
-        createdAt: { type: Date, default: Date.now }
-    }],
+    comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
     createdAt: { type: Date, default: Date.now }
 })
 
