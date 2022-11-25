@@ -10,7 +10,7 @@ export const getAllPosts = async (req, res) => {
     } catch (err) {
         res.status(500).json({ message: err.message })
     }
-}
+} 
 
 export const getPost = async (req, res) => {
     const { id } = req.params
@@ -42,7 +42,7 @@ export const commentPost = async (req, res) => {
         const post = await Post.findById(req.params.id)
         const user = await User.findById(req.userId)
         const comment = {
-            user, comment : req.body.comment
+            user, comment: req.body.comment
         }
         const createdComment = await Comment.create(comment)
         console.log(createdComment, "THIS IS COMMENT")
@@ -60,7 +60,7 @@ export const replyComment = async (req, res) => {
         const comment = await Comment.findById(req.params.id)
         const user = await User.findById(req.userId)
         const reply = {
-            user, reply : req.body.reply
+            user, reply: req.body.reply
         }
         comment.replies.push(reply)
         const repliedComment = await comment.save()
